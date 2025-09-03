@@ -1,0 +1,21 @@
+--Criando a função TEMPO_CLIENTE_ANOS para retornar o tempo do cliente em anos
+CREATE OR REPLACE FUNCTION TEMPO_CLIENTE_ANOS(DATA_INICIAL DATE) RETURN NUMBER IS
+    DATA_FINAL DATE := SYSDATE;
+    ANOS NUMBER;
+BEGIN
+    IF DATA_INICIAL > DATA_FINAL THEN
+        ANOS := 0;
+    ELSE
+        ANOS := TRUNC(MONTHS_BETWEEN(DATA_FINAL, DATA_INICIAL)/12);
+    END IF;
+    RETURN ANOS;
+END;
+
+
+--Consulta para retornar a função criada 
+SELECT 
+    ID_CLIENTE,
+    NOME,
+    TEMPO_CLIENTE_ANOS(DT_CADASTRO) AS "Tempo de Cliente Em Anos"
+FROM 
+    SOSARA.CLIENTE;
