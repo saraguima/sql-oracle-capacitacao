@@ -6,6 +6,11 @@ Durante o curso, foram abordados conceitos fundamentais e avançados de SQL com 
 
 ---
 
+Instrutor:
+**Gregório Ferraz Neto - Especialista de Banco de Dados ORACLE na Minsait an Indra Company**
+
+---
+
 ## Estrutura do Repositório
 Cada atividade contém:
 - **Enunciado**: instruções originais da tarefa (fornecidas pelo professor).
